@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100dvh;
+  box-sizing: border-box;
+  /* border: 3px solid yellow; */
+}
+
+#bg-container {
+  background-image: url("assets/BG_Day.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 5px solid palevioletred; */
+}
+
+#title {
+  color: #fff8c7;
+  font-size: clamp(5rem, 3vw, 6rem);
+  text-align: center;
+}
+
+#ui {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-content: space-between;
+  justify-content: flex-start; /* stack items from the top */
+  gap: 1rem;
+  background-color: rgba(255, 248, 199, 0.8);
+  border-radius: 30px;
+  padding: 3vw;
+  margin: 5vh 5vw;
+  max-height: 60vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* border: 3px solid red; */
+}
+
+#ui-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.tab {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 3px solid blue; */
+}
+
+.tab button {
+  font-family: "Jersey 10", sans-serif;
+  background-color: transparent;
+  color: #f07e25;
+  font-size: clamp(2rem, 2vw, 4rem);
+  border: none;
+  cursor: pointer;
+  /* border: 3px solid red; */
+}
+
+.tab button.active {
+  background-color: #f07e25;
+  color: #fff8c7;
+  border-radius: 20px;
+  width: auto;
+  height: clamp(5rem, 5vw, 7rem);
+}
+
+.tabcontent {
+  width: 100%;
+  font-size: clamp(4rem, 4vw, 6rem);
+  color: #f07e25;
+  text-align: center;
+  /* border: 3px solid green; */
+}
+
+#controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 3px solid purple; */
+}
+
+.controlButton {
+  font-family: "Jersey 10", sans-serif;
+  width: 100%;
+  font-size: clamp(2rem, 2vw, 4rem);
+  color: #fff8c7;
+  background-color: #f07e25;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

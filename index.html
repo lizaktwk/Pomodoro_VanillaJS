@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pomodoro Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="A simple Pomodoro timer to help you manage your study sessions effectively.">
+</head>
+
+<body>
+    <div id="bg-container">
+        <h1 id="title">Pomodoro</h1>
+        <section id="ui">
+            <div id="ui-inner">
+                <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks" id="tab-study">Study</button>
+                    <button class="tablinks" id="tab-shortBreak">Short Break</button>
+                    <button class="tablinks" id="tab-longBreak">Long Break</button>
+                </div>
+
+                <!-- Tab content -->
+                <div id="study" class="tabcontent">
+                    <h3 class="timerDisplay">25:00</h3>
+                </div>
+
+                <div id="shortBreak" class="tabcontent">
+                    <h3 class="timerDisplay">05:00</h3>
+                </div>
+
+                <div id="longBreak" class="tabcontent">
+                    <h3 class="timerDisplay">15:00</h3>
+                </div>
+                <!-- Control buttons -->
+                <div id="controls">
+                    <button class="controlButton" id="startBtn">START</button>
+                    <button class="controlButton" id="pauseBtn">PAUSE</button>
+                    <button class="controlButton" id="resumeBtn">RESUME</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
