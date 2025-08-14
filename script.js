@@ -1,5 +1,8 @@
 let audio = new Audio("assets/soft-opening-piano-logo-153268.mp3");
 
+const timerColor = document.querySelectorAll(".tabcontent");
+const resumeBGcolor = document.querySelectorAll(".controlButton");
+
 // get the individual timer tabs
 let studyTab = document.getElementById("tab-study");
 let shortBreakTab = document.getElementById("tab-shortBreak");
@@ -33,10 +36,28 @@ function openTab(evt, timerCategory) {
   let defaultTime = 0;
   if (timerCategory === "study") {
     defaultTime = 25 * 60;
+    timerColor.forEach((el) => {
+      el.style.color = "#F07E25";
+    });
+    resumeBGcolor.forEach((el) => {
+      el.style.backgroundColor = "#F07E25";
+    });
   } else if (timerCategory === "shortBreak") {
     defaultTime = 5 * 60;
+    timerColor.forEach((el) => {
+      el.style.color = "#F07E25";
+    });
+    resumeBGcolor.forEach((el) => {
+      el.style.backgroundColor = "#F07E25";
+    });
   } else if (timerCategory === "longBreak") {
     defaultTime = 15 * 60;
+    timerColor.forEach((el) => {
+      el.style.color = "#F07E25";
+    });
+    resumeBGcolor.forEach((el) => {
+      el.style.backgroundColor = "#F07E25";
+    });
   }
 
   // set the display for the new tab
@@ -103,6 +124,12 @@ pauseBtn.addEventListener("click", () => {
 
   pauseBtn.style.display = "none";
   resumeBtn.style.display = "inline-block";
+  timerColor.forEach((el) => {
+    el.style.color = "#F6A724";
+  });
+  resumeBGcolor.forEach((el) => {
+    el.style.backgroundColor = "#F6A724";
+  });
 });
 
 // add event listener to the resume button
@@ -111,6 +138,12 @@ resumeBtn.addEventListener("click", () => {
 
   resumeBtn.style.display = "none";
   pauseBtn.style.display = "inline-block";
+  timerColor.forEach((el) => {
+    el.style.color = "#F07E25";
+  });
+  resumeBGcolor.forEach((el) => {
+    el.style.backgroundColor = "#F07E25";
+  });
 
   let activeTabContent = document.querySelector(".tabcontent[style*='block']");
   let display = activeTabContent.querySelector(".timerDisplay");
